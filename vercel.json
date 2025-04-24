@@ -2,9 +2,9 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/css/:path*", "destination": "/css/:path*" },
+    { "source": "/js/:path*", "destination": "/js/:path*" },
     { "source": "/img/:path*", "destination": "/img/:path*" },
-    { "source": "/js/:path*",  "destination": "/js/:path*" },
-    { "source": "/",           "destination": "/html/index.html" },
-    { "source": "/:path*",     "destination": "/html/:path*.html" }
+    { "source": "/", "destination": "/html/index.html" },
+    { "source": "/:path((?!css/|js/|img/).*)", "destination": "/html/:path.html"}
   ]
 }
