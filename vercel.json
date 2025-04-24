@@ -6,6 +6,15 @@
     { "source": "/img/(.*)", "destination": "/img/$1" },
     { "source": "/(.+\\.html)", "destination": "/html/$1" },
     { "source": "/", "destination": "/html/index.html" },
-    { "source": "/((?!css/|js/|img/).*)", "destination": "/html/$1.html" }
+    { "source": "/((?!css/|js/|img/).*)", "destination": "/html/$1.html" },
+    { "source": "/favicon.ico", "destination": "/img/logo_crrp_round.png" }
+  ],
+  "headers": [
+    {
+      "source": "/favicon.ico",
+      "headers": [
+        { "key": "Content-Type", "value": "image/png" }
+      ]
+    }
   ]
 }
