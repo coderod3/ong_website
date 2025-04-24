@@ -1,10 +1,11 @@
 {
   "cleanUrls": false,
   "rewrites": [
-    { "source": "/css/:path*", "destination": "/css/:path*" },
-    { "source": "/js/:path*", "destination": "/js/:path*" },
-    { "source": "/img/:path*", "destination": "/img/:path*" },
+    { "source": "/css/(.*)", "destination": "/css/$1" },
+    { "source": "/js/(.*)", "destination": "/js/$1"  },
+    { "source": "/img/(.*)", "destination": "/img/$1" },
+    { "source": "/(.+\\.html)", "destination": "/html/$1" },
     { "source": "/", "destination": "/html/index.html" },
-    { "source": "/:path((?!css/|js/|img/).*)", "destination": "/html/:path.html"}
+    { "source": "/((?!css/|js/|img/).*)", "destination": "/html/$1.html" }
   ]
 }
