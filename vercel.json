@@ -1,13 +1,13 @@
 {
   "cleanUrls": false,
   "rewrites": [
+    { "source": "/favicon.ico", "destination": "/img/logo_crrp_round.png" },
     { "source": "/css/(.*)", "destination": "/css/$1" },
     { "source": "/js/(.*)", "destination": "/js/$1"  },
     { "source": "/img/(.*)", "destination": "/img/$1" },
-    { "source": "/favicon.ico", "destination": "/img/logo_crrp_round.png" },
     { "source": "/(.+\\.html)", "destination": "/html/$1" },
     { "source": "/", "destination": "/html/index.html" },
-    { "source": "/((?!css/|js/|img/).*)", "destination": "/html/$1.html" }
+    { "source": "/((?!css/|js/|img/|favicon\\.ico).*)", "destination": "/html/$1.html" }
   ],
   "headers": [
     {
