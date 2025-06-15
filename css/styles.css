@@ -1,8 +1,8 @@
 :root {
-  --header-bg-color: #004d00;
-  --icons-bg-color: #006400;
-  --footer-bg-bottom-color: #3caf41;
-  --paleta-escura: #002000;
+    --header-bg-color: #004d00;
+    --icons-bg-color: #006400;
+    --footer-bg-bottom-color: #3caf41;
+    --paleta-escura: #002000;
 }
 
 /* Reset e estilo básico */
@@ -278,6 +278,7 @@ footer {
     padding: 10px;
     font-size: 13px;
     font-weight: bold;
+    text-align: center;
 }
 
 /* Responsividade */
@@ -308,7 +309,7 @@ footer {
     .nav-container a {
         font-size: 12px;
         padding-right: 0px;
-        
+
     }
 
     .logo {
@@ -323,9 +324,9 @@ footer {
 
 @media (max-width: 400px) {
     .nav-container a {
-        font-size: 9px;
+        font-size: 10px;
         padding-right: 0px;
-        
+
     }
 
     .logo {
@@ -333,7 +334,12 @@ footer {
     }
 
     .footer-nav a {
-        font-size: 9px;
+        font-size: 11px;
         padding: 0px;
+    }
+
+    .footer-content .social-icon img {
+        width: 20px;
+        height: 20px;
     }
 }
