@@ -16,15 +16,6 @@ A CRRP é uma organização que atua na coleta, triagem e comercialização de r
 
 - **Sobre Nós:**  
   - História, missão, visão e valores da cooperativa.
-  - Apresentação da equipe.
-
-- **Serviços:**  
-  - Descrição dos serviços de coleta e reciclagem.
-  - Informações sobre parcerias e colaborações.
-
-- **Como Funciona:**  
-  - Guia visual do processo de reciclagem.
-  - Dados e estatísticas de impacto ambiental.
 
 - **Educação Ambiental:**  
   - Conteúdos e recursos para conscientização.
