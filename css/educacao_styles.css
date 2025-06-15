@@ -17,33 +17,6 @@ body {
     padding: 0 20px;
 }
 
-/* Cabeçalho e Navegação */
-header {
-    background: #fff;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
 /* Banner/Introdução da Página */
 .edu-banner {
     background: url('../img/educacao/edu_banner2.png') no-repeat center center/cover;
@@ -52,7 +25,6 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
     /* Espaço para compensar o header fixo */
     text-align: center;
     color: #fff;
@@ -157,6 +129,7 @@ nav ul li a {
     width: 100%;
     height: 400px;
     border: none;
+    border-radius: 5%;
 }
 
 /* Seção: Dados e Conscientização */
@@ -195,20 +168,6 @@ nav ul li a {
     width: 40px;
     height: 40px;
     object-fit: contain;
-}
-
-/* Rodapé */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
 }
 
 /* Responsividade */
