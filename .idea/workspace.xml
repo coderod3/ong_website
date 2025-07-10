@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e44bfeb-9f1a-44b4-9553-061debd60398" name="Changes" comment="" />
+    <list default="true" id="2e44bfeb-9f1a-44b4-9553-061debd60398" name="Changes" comment="Refatoração completa de design e implementação de novas funcionalidades&#10;Este commit conclui uma extensa refatoração da interface e da experiência do usuário do site da CRRP, além de adicionar novas seções e funcionalidades interativas.&#10;&#10;As principais mudanças foram:&#10;&#10;Estrutura e Código Base:&#10;&#10;Refatoração do header e footer para serem componentes dinâmicos, carregados via JavaScript em todas as páginas, eliminando a repetição de código&#10;&#10;Criação de arquivos parciais _header.html e _footer.html para centralizar a manutenção&#10;&#10;Isolamento de estilos específicos de cada página em seus próprios arquivos CSS (home_styles.css, sobre-nos_styles.css, etc.), limpando o styles.css principal&#10;&#10;Configuração do vercel.json para utilizar Clean URLs, removendo a necessidade do /html/ e da extensão .html nos links de produção&#10;&#10;Ajuste de todos os links de navegação para um formato relativo (index.html, educacao.html, etc.) que funciona tanto localmente quanto online com a nova configuração da Vercel&#10;&#10;Adaptação de todos os caminhos relativos internos (como ../) para caminhos absolutos com base no diretório raiz (/educacao, /contatos, etc.), garantindo funcionamento correto no ambiente de produção da Vercel&#10;&#10;URLs agora funcionam de forma limpa e amigável no Vercel, sem exibição de diretórios ou extensões .html&#10;&#10;Header e Footer:&#10;&#10;Centralização do menu de navegação no header para melhor equilíbrio visual&#10;&#10;Esconde o logo em telas muito estreitas (abaixo de 480px) para evitar que o texto da navegação colida, melhorando a responsividade&#10;&#10;Unificação do efeito hover nos links do header e do footer para uma experiência consistente&#10;&#10;Transformação do logo no header em um link clicável para a página inicial&#10;&#10;Página Home (index.html):&#10;&#10;Reformulação completa da seção Destaques com conteúdo relevante e alinhado ao site final: Educação Ambiental, Parcerias e um novo card Transforme Vidas e o Planeta que introduz a calculadora&#10;&#10;Correção do espaçamento vertical entre a seção de introdução e o carrossel&#10;&#10;Ajuste da altura das imagens do carrossel em telas estreitas para evitar zoom excessivo e melhorar a visualização mobile&#10;&#10;Adição de uma nova seção de Chamada para Ação (CTA) para a Calculadora, substituindo a antiga seção de destaques&#10;&#10;Correção de um bug de visibilidade no botão do CTA da calculadora, garantindo que ele tenha a cor de fundo correta desde o carregamento da página&#10;&#10;Página Sobre Nós (sobre-nos.html):&#10;&#10;Redesign completo da página, saindo de um layout simples de texto para um design moderno baseado em cards, com ícones e seções claras para Missão, Projeto Social, Processo de Reciclagem, Serviços e Parceiros&#10;&#10;Página Contatos (contatos.html):&#10;&#10;Redesign completo da página, unificando as informações de contato e o mapa em um único cartão integrado&#10;&#10;Implementação de um layout de duas colunas (informações à esquerda, mapa à direita) para desktop, que se transforma em uma coluna única em dispositivos móveis&#10;&#10;Aplicação do estilo de texto e dos destaques em verde nos detalhes de contato, conforme solicitado&#10;&#10;Ajuste na altura do mapa para garantir uma boa visualização em telas de todos os tamanhos, corrigindo o problema de ficar muito esticado na vertical em celulares&#10;&#10;Nova Funcionalidade: Calculadora de Impacto:&#10;&#10;Criação da nova página calculadora.html com a ferramenta interativa&#10;&#10;Design da calculadora refeito múltiplas vezes, chegando a uma versão final limpa, moderna e com a paleta de cores do site&#10;&#10;Adição de pop-ups de informação com explicações sobre como a reciclagem economiza recursos&#10;&#10;Correção de bugs críticos no CSS dos pop-ups (variável de cor e z-index) para garantir a funcionalidade&#10;&#10;Implementação de um widget de assistente de contato que aparece de forma sutil 5 segundos após a primeira interação do usuário com a calculadora&#10;&#10;Página Educação Ambiental (educacao.html):&#10;&#10;Integração da seção Calculadora de Impacto diretamente na página, precedida por um título e texto introdutório para criar uma experiência coesa&#10;&#10;Ajustes nos arquivos CSS (educacao_styles.css e calculadora_styles.css) para garantir que a calculadora se encaixe como uma seção, sem quebrar o layout da página&#10;&#10;Correção de um bug onde a calculadora não funcionava devido à ordem de carregamento dos scripts&#10;&#10;Ajuste no CSS do fact-grid para centralizar os cards corretamente em telas estreitas">
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/calculadora_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/home_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/_footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/_header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calculadora.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/aluminum_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/metal_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/mission_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/paper_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/plastic_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/process_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sobre-nos/social_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/calculadora_script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/contatos_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contatos_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/educacao_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/educacao_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/sobre-nos_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sobre-nos_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/contatos.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/contatos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/educacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/educacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/sobre-nos.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sobre-nos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/educacao_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/educacao_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/carousel_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +42,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "coderod3"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/coderod3/ong_website.git",
+    "accountId": "583218fb-61c8-4003-ae67-4830a2966c70"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -27,23 +73,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rodri/IdeaProjects/ong_website/img&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rodri/WebstormProjects/ong_website/img/sobre-nos",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rodri\WebstormProjects\ong_website\img\sobre-nos" />
       <recent name="C:\Users\rodri\IdeaProjects\ong_website\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -70,8 +122,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
       </set>
     </attachedChunks>
   </component>
@@ -87,10 +138,120 @@
       <workItem from="1741950196005" duration="1343000" />
       <workItem from="1742065999466" duration="6000" />
       <workItem from="1742315501677" duration="377000" />
+      <workItem from="1751841091182" duration="11829000" />
+      <workItem from="1751880149016" duration="14632000" />
+      <workItem from="1751923317817" duration="14772000" />
+      <workItem from="1752083453399" duration="35362000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Refatoração completa de design e implementação de novas funcionalidades&#10;&#10;Este commit conclui uma extensa refatoração da interface e da experiência do usuário do site da CRRP, além de adicionar novas seções e funcionalidades interativas.&#10;&#10;As principais mudanças foram:&#10;&#10;**Estrutura e Código Base:**&#10;- [x] Refatoração do header e footer para serem componentes dinâmicos, carregados via JavaScript (`loader.js`) em todas as páginas, eliminando a repetição de código.&#10;- [x] Criação de arquivos parciais `_header.html` e `_footer.html` para centralizar a manutenção.&#10;- [x] Isolamento de estilos específicos de cada página em seus próprios arquivos CSS (`home_styles.css`, `sobre-nos_styles.css`, etc.), limpando o `styles.css` principal.&#10;- [x] Configuração do `vercel.json` para utilizar &quot;Clean URLs&quot;, removendo a necessidade do `/html/` e da extensão `.html` nos links de produção.&#10;- [x] Ajuste de todos os links de navegação para um formato relativo (`index.html`, `educacao.html`, etc.) que funciona tanto localmente quanto online com a nova configuração da Vercel.&#10;&#10;**Header e Footer:**&#10;- [x] Centralização do menu de navegação no header para melhor equilíbrio visual.&#10;- [x] Esconde o logo em telas muito estreitas (abaixo de 480px) para evitar que o texto da navegação colida, melhorando a responsividade.&#10;- [x] Unificação do efeito &quot;hover&quot; nos links do header e do footer para uma experiência consistente.&#10;- [x] Transformação do logo no header em um link clicável para a página inicial.&#10;&#10;**Página Home (`index.html`):**&#10;- [x] Reformulação completa da seção &quot;Destaques&quot; com conteúdo relevante e alinhado ao site final: &quot;Educação Ambiental&quot;, &quot;Parcerias&quot; e um novo card &quot;Transforme Vidas e o Planeta&quot; que introduz a calculadora.&#10;- [x] Correção do espaçamento vertical entre a seção de introdução e o carrossel.&#10;- [x] Ajuste da altura das imagens do carrossel em telas estreitas para evitar &quot;zoom&quot; excessivo e melhorar a visualização mobile.&#10;- [x] Adição de uma nova seção de &quot;Chamada para Ação&quot; (CTA) para a Calculadora, substituindo a antiga seção de destaques.&#10;- [x] Correção de um bug de visibilidade no botão do CTA da calculadora, garantindo que ele tenha a cor de fundo correta desde o carregamento da página.&#10;&#10;**Página Sobre Nós (`sobre-nos.html`):**&#10;- [x] Redesign completo da página, saindo de um layout simples de texto para um design moderno baseado em &quot;cards&quot;, com ícones e seções claras para Missão, Projeto Social, Processo de Reciclagem, Serviços e Parceiros.&#10;&#10;**Página Contatos (`contatos.html`):**&#10;- [x] Redesign completo da página, unificando as informações de contato e o mapa em um único &quot;cartão&quot; integrado.&#10;- [x] Implementação de um layout de duas colunas (informações à esquerda, mapa à direita) para desktop, que se transforma em uma coluna única em dispositivos móveis.&#10;- [x] Aplicação do estilo de texto e dos destaques em verde nos detalhes de contato, conforme solicitado.&#10;- [x] Ajuste na altura do mapa para garantir uma boa visualização em telas de todos os tamanhos, corrigindo o problema de ficar muito &quot;esticado&quot; na vertical em celulares.&#10;&#10;**Nova Funcionalidade: Calculadora de Impacto:**&#10;- [x] Criação da nova página `calculadora.html` com a ferramenta interativa.&#10;- [x] Design da calculadora refeito múltiplas vezes, chegando a uma versão final limpa, moderna e com a paleta de cores do site.&#10;- [x] Adição de pop-ups de informação `(i)` com explicações sobre como a reciclagem economiza recursos.&#10;- [x] Correção de bugs críticos no CSS dos pop-ups (variável de cor e `z-index`) para garantir a funcionalidade.&#10;- [x] Implementação de um &quot;widget de assistente de contato&quot; que aparece de forma sutil 5 segundos após a primeira interação do usuário com a calculadora.&#10;&#10;**Página Educação Ambiental (`educacao.html`):**&#10;- [x] Integração da seção &quot;Calculadora de Impacto&quot; diretamente na página, precedida por um título e texto introdutório para criar uma experiência coesa.&#10;- [x] Ajustes nos arquivos CSS (`educacao_styles.css` e `calculadora_styles.css`) para garantir que a calculadora se encaixe como uma seção, sem quebrar o layout da página.&#10;- [x] Correção de um bug onde a calculadora não funcionava devido à ordem de carregamento dos scripts.&#10;- [x] Ajuste no CSS do `fact-grid` para centralizar os cards corretamente em telas estreitas.">
+      <option name="closed" value="true" />
+      <created>1752118732823</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752118732823</updated>
+    </task>
+    <task id="LOCAL-00002" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752122917074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752122917074</updated>
+    </task>
+    <task id="LOCAL-00003" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752124600324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752124600324</updated>
+    </task>
+    <task id="LOCAL-00004" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752125767511</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752125767511</updated>
+    </task>
+    <task id="LOCAL-00005" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752125781556</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752125781556</updated>
+    </task>
+    <task id="LOCAL-00006" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752126105750</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752126105750</updated>
+    </task>
+    <task id="LOCAL-00007" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752126350430</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752126350430</updated>
+    </task>
+    <task id="LOCAL-00008" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752126609309</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752126609309</updated>
+    </task>
+    <task id="LOCAL-00009" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752126823104</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752126823104</updated>
+    </task>
+    <task id="LOCAL-00010" summary="correção vercel">
+      <option name="closed" value="true" />
+      <created>1752126828531</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752126828531</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refatoração completa de design e implementação de novas funcionalidades&#10;Este commit conclui uma extensa refatoração da interface e da experiência do usuário do site da CRRP, além de adicionar novas seções e funcionalidades interativas.&#10;&#10;As principais mudanças foram:&#10;&#10;Estrutura e Código Base:&#10;&#10;Refatoração do header e footer para serem componentes dinâmicos, carregados via JavaScript em todas as páginas, eliminando a repetição de código&#10;&#10;Criação de arquivos parciais _header.html e _footer.html para centralizar a manutenção&#10;&#10;Isolamento de estilos específicos de cada página em seus próprios arquivos CSS (home_styles.css, sobre-nos_styles.css, etc.), limpando o styles.css principal&#10;&#10;Configuração do vercel.json para utilizar Clean URLs, removendo a necessidade do /html/ e da extensão .html nos links de produção&#10;&#10;Ajuste de todos os links de navegação para um formato relativo (index.html, educacao.html, etc.) que funciona tanto localmente quanto online com a nova configuração da Vercel&#10;&#10;Adaptação de todos os caminhos relativos internos (como ../) para caminhos absolutos com base no diretório raiz (/educacao, /contatos, etc.), garantindo funcionamento correto no ambiente de produção da Vercel&#10;&#10;URLs agora funcionam de forma limpa e amigável no Vercel, sem exibição de diretórios ou extensões .html&#10;&#10;Header e Footer:&#10;&#10;Centralização do menu de navegação no header para melhor equilíbrio visual&#10;&#10;Esconde o logo em telas muito estreitas (abaixo de 480px) para evitar que o texto da navegação colida, melhorando a responsividade&#10;&#10;Unificação do efeito hover nos links do header e do footer para uma experiência consistente&#10;&#10;Transformação do logo no header em um link clicável para a página inicial&#10;&#10;Página Home (index.html):&#10;&#10;Reformulação completa da seção Destaques com conteúdo relevante e alinhado ao site final: Educação Ambiental, Parcerias e um novo card Transforme Vidas e o Planeta que introduz a calculadora&#10;&#10;Correção do espaçamento vertical entre a seção de introdução e o carrossel&#10;&#10;Ajuste da altura das imagens do carrossel em telas estreitas para evitar zoom excessivo e melhorar a visualização mobile&#10;&#10;Adição de uma nova seção de Chamada para Ação (CTA) para a Calculadora, substituindo a antiga seção de destaques&#10;&#10;Correção de um bug de visibilidade no botão do CTA da calculadora, garantindo que ele tenha a cor de fundo correta desde o carregamento da página&#10;&#10;Página Sobre Nós (sobre-nos.html):&#10;&#10;Redesign completo da página, saindo de um layout simples de texto para um design moderno baseado em cards, com ícones e seções claras para Missão, Projeto Social, Processo de Reciclagem, Serviços e Parceiros&#10;&#10;Página Contatos (contatos.html):&#10;&#10;Redesign completo da página, unificando as informações de contato e o mapa em um único cartão integrado&#10;&#10;Implementação de um layout de duas colunas (informações à esquerda, mapa à direita) para desktop, que se transforma em uma coluna única em dispositivos móveis&#10;&#10;Aplicação do estilo de texto e dos destaques em verde nos detalhes de contato, conforme solicitado&#10;&#10;Ajuste na altura do mapa para garantir uma boa visualização em telas de todos os tamanhos, corrigindo o problema de ficar muito esticado na vertical em celulares&#10;&#10;Nova Funcionalidade: Calculadora de Impacto:&#10;&#10;Criação da nova página calculadora.html com a ferramenta interativa&#10;&#10;Design da calculadora refeito múltiplas vezes, chegando a uma versão final limpa, moderna e com a paleta de cores do site&#10;&#10;Adição de pop-ups de informação com explicações sobre como a reciclagem economiza recursos&#10;&#10;Correção de bugs críticos no CSS dos pop-ups (variável de cor e z-index) para garantir a funcionalidade&#10;&#10;Implementação de um widget de assistente de contato que aparece de forma sutil 5 segundos após a primeira interação do usuário com a calculadora&#10;&#10;Página Educação Ambiental (educacao.html):&#10;&#10;Integração da seção Calculadora de Impacto diretamente na página, precedida por um título e texto introdutório para criar uma experiência coesa&#10;&#10;Ajustes nos arquivos CSS (educacao_styles.css e calculadora_styles.css) para garantir que a calculadora se encaixe como uma seção, sem quebrar o layout da página&#10;&#10;Correção de um bug onde a calculadora não funcionava devido à ordem de carregamento dos scripts&#10;&#10;Ajuste no CSS do fact-grid para centralizar os cards corretamente em telas estreitas">
+      <option name="closed" value="true" />
+      <created>1752128433015</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752128433016</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Refatoração completa de design e implementação de novas funcionalidades&#10;&#10;Este commit conclui uma extensa refatoração da interface e da experiência do usuário do site da CRRP, além de adicionar novas seções e funcionalidades interativas.&#10;&#10;As principais mudanças foram:&#10;&#10;**Estrutura e Código Base:**&#10;- [x] Refatoração do header e footer para serem componentes dinâmicos, carregados via JavaScript (`loader.js`) em todas as páginas, eliminando a repetição de código.&#10;- [x] Criação de arquivos parciais `_header.html` e `_footer.html` para centralizar a manutenção.&#10;- [x] Isolamento de estilos específicos de cada página em seus próprios arquivos CSS (`home_styles.css`, `sobre-nos_styles.css`, etc.), limpando o `styles.css` principal.&#10;- [x] Configuração do `vercel.json` para utilizar &quot;Clean URLs&quot;, removendo a necessidade do `/html/` e da extensão `.html` nos links de produção.&#10;- [x] Ajuste de todos os links de navegação para um formato relativo (`index.html`, `educacao.html`, etc.) que funciona tanto localmente quanto online com a nova configuração da Vercel.&#10;&#10;**Header e Footer:**&#10;- [x] Centralização do menu de navegação no header para melhor equilíbrio visual.&#10;- [x] Esconde o logo em telas muito estreitas (abaixo de 480px) para evitar que o texto da navegação colida, melhorando a responsividade.&#10;- [x] Unificação do efeito &quot;hover&quot; nos links do header e do footer para uma experiência consistente.&#10;- [x] Transformação do logo no header em um link clicável para a página inicial.&#10;&#10;**Página Home (`index.html`):**&#10;- [x] Reformulação completa da seção &quot;Destaques&quot; com conteúdo relevante e alinhado ao site final: &quot;Educação Ambiental&quot;, &quot;Parcerias&quot; e um novo card &quot;Transforme Vidas e o Planeta&quot; que introduz a calculadora.&#10;- [x] Correção do espaçamento vertical entre a seção de introdução e o carrossel.&#10;- [x] Ajuste da altura das imagens do carrossel em telas estreitas para evitar &quot;zoom&quot; excessivo e melhorar a visualização mobile.&#10;- [x] Adição de uma nova seção de &quot;Chamada para Ação&quot; (CTA) para a Calculadora, substituindo a antiga seção de destaques.&#10;- [x] Correção de um bug de visibilidade no botão do CTA da calculadora, garantindo que ele tenha a cor de fundo correta desde o carregamento da página.&#10;&#10;**Página Sobre Nós (`sobre-nos.html`):**&#10;- [x] Redesign completo da página, saindo de um layout simples de texto para um design moderno baseado em &quot;cards&quot;, com ícones e seções claras para Missão, Projeto Social, Processo de Reciclagem, Serviços e Parceiros.&#10;&#10;**Página Contatos (`contatos.html`):**&#10;- [x] Redesign completo da página, unificando as informações de contato e o mapa em um único &quot;cartão&quot; integrado.&#10;- [x] Implementação de um layout de duas colunas (informações à esquerda, mapa à direita) para desktop, que se transforma em uma coluna única em dispositivos móveis.&#10;- [x] Aplicação do estilo de texto e dos destaques em verde nos detalhes de contato, conforme solicitado.&#10;- [x] Ajuste na altura do mapa para garantir uma boa visualização em telas de todos os tamanhos, corrigindo o problema de ficar muito &quot;esticado&quot; na vertical em celulares.&#10;&#10;**Nova Funcionalidade: Calculadora de Impacto:**&#10;- [x] Criação da nova página `calculadora.html` com a ferramenta interativa.&#10;- [x] Design da calculadora refeito múltiplas vezes, chegando a uma versão final limpa, moderna e com a paleta de cores do site.&#10;- [x] Adição de pop-ups de informação `(i)` com explicações sobre como a reciclagem economiza recursos.&#10;- [x] Correção de bugs críticos no CSS dos pop-ups (variável de cor e `z-index`) para garantir a funcionalidade.&#10;- [x] Implementação de um &quot;widget de assistente de contato&quot; que aparece de forma sutil 5 segundos após a primeira interação do usuário com a calculadora.&#10;&#10;**Página Educação Ambiental (`educacao.html`):**&#10;- [x] Integração da seção &quot;Calculadora de Impacto&quot; diretamente na página, precedida por um título e texto introdutório para criar uma experiência coesa.&#10;- [x] Ajustes nos arquivos CSS (`educacao_styles.css` e `calculadora_styles.css`) para garantir que a calculadora se encaixe como uma seção, sem quebrar o layout da página.&#10;- [x] Correção de um bug onde a calculadora não funcionava devido à ordem de carregamento dos scripts.&#10;- [x] Ajuste no CSS do `fact-grid` para centralizar os cards corretamente em telas estreitas." />
+    <MESSAGE value="correção vercel" />
+    <MESSAGE value="Refatoração completa de design e implementação de novas funcionalidades&#10;Este commit conclui uma extensa refatoração da interface e da experiência do usuário do site da CRRP, além de adicionar novas seções e funcionalidades interativas.&#10;&#10;As principais mudanças foram:&#10;&#10;Estrutura e Código Base:&#10;&#10;Refatoração do header e footer para serem componentes dinâmicos, carregados via JavaScript em todas as páginas, eliminando a repetição de código&#10;&#10;Criação de arquivos parciais _header.html e _footer.html para centralizar a manutenção&#10;&#10;Isolamento de estilos específicos de cada página em seus próprios arquivos CSS (home_styles.css, sobre-nos_styles.css, etc.), limpando o styles.css principal&#10;&#10;Configuração do vercel.json para utilizar Clean URLs, removendo a necessidade do /html/ e da extensão .html nos links de produção&#10;&#10;Ajuste de todos os links de navegação para um formato relativo (index.html, educacao.html, etc.) que funciona tanto localmente quanto online com a nova configuração da Vercel&#10;&#10;Adaptação de todos os caminhos relativos internos (como ../) para caminhos absolutos com base no diretório raiz (/educacao, /contatos, etc.), garantindo funcionamento correto no ambiente de produção da Vercel&#10;&#10;URLs agora funcionam de forma limpa e amigável no Vercel, sem exibição de diretórios ou extensões .html&#10;&#10;Header e Footer:&#10;&#10;Centralização do menu de navegação no header para melhor equilíbrio visual&#10;&#10;Esconde o logo em telas muito estreitas (abaixo de 480px) para evitar que o texto da navegação colida, melhorando a responsividade&#10;&#10;Unificação do efeito hover nos links do header e do footer para uma experiência consistente&#10;&#10;Transformação do logo no header em um link clicável para a página inicial&#10;&#10;Página Home (index.html):&#10;&#10;Reformulação completa da seção Destaques com conteúdo relevante e alinhado ao site final: Educação Ambiental, Parcerias e um novo card Transforme Vidas e o Planeta que introduz a calculadora&#10;&#10;Correção do espaçamento vertical entre a seção de introdução e o carrossel&#10;&#10;Ajuste da altura das imagens do carrossel em telas estreitas para evitar zoom excessivo e melhorar a visualização mobile&#10;&#10;Adição de uma nova seção de Chamada para Ação (CTA) para a Calculadora, substituindo a antiga seção de destaques&#10;&#10;Correção de um bug de visibilidade no botão do CTA da calculadora, garantindo que ele tenha a cor de fundo correta desde o carregamento da página&#10;&#10;Página Sobre Nós (sobre-nos.html):&#10;&#10;Redesign completo da página, saindo de um layout simples de texto para um design moderno baseado em cards, com ícones e seções claras para Missão, Projeto Social, Processo de Reciclagem, Serviços e Parceiros&#10;&#10;Página Contatos (contatos.html):&#10;&#10;Redesign completo da página, unificando as informações de contato e o mapa em um único cartão integrado&#10;&#10;Implementação de um layout de duas colunas (informações à esquerda, mapa à direita) para desktop, que se transforma em uma coluna única em dispositivos móveis&#10;&#10;Aplicação do estilo de texto e dos destaques em verde nos detalhes de contato, conforme solicitado&#10;&#10;Ajuste na altura do mapa para garantir uma boa visualização em telas de todos os tamanhos, corrigindo o problema de ficar muito esticado na vertical em celulares&#10;&#10;Nova Funcionalidade: Calculadora de Impacto:&#10;&#10;Criação da nova página calculadora.html com a ferramenta interativa&#10;&#10;Design da calculadora refeito múltiplas vezes, chegando a uma versão final limpa, moderna e com a paleta de cores do site&#10;&#10;Adição de pop-ups de informação com explicações sobre como a reciclagem economiza recursos&#10;&#10;Correção de bugs críticos no CSS dos pop-ups (variável de cor e z-index) para garantir a funcionalidade&#10;&#10;Implementação de um widget de assistente de contato que aparece de forma sutil 5 segundos após a primeira interação do usuário com a calculadora&#10;&#10;Página Educação Ambiental (educacao.html):&#10;&#10;Integração da seção Calculadora de Impacto diretamente na página, precedida por um título e texto introdutório para criar uma experiência coesa&#10;&#10;Ajustes nos arquivos CSS (educacao_styles.css e calculadora_styles.css) para garantir que a calculadora se encaixe como uma seção, sem quebrar o layout da página&#10;&#10;Correção de um bug onde a calculadora não funcionava devido à ordem de carregamento dos scripts&#10;&#10;Ajuste no CSS do fact-grid para centralizar os cards corretamente em telas estreitas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoração completa de design e implementação de novas funcionalidades&#10;Este commit conclui uma extensa refatoração da interface e da experiência do usuário do site da CRRP, além de adicionar novas seções e funcionalidades interativas.&#10;&#10;As principais mudanças foram:&#10;&#10;Estrutura e Código Base:&#10;&#10;Refatoração do header e footer para serem componentes dinâmicos, carregados via JavaScript em todas as páginas, eliminando a repetição de código&#10;&#10;Criação de arquivos parciais _header.html e _footer.html para centralizar a manutenção&#10;&#10;Isolamento de estilos específicos de cada página em seus próprios arquivos CSS (home_styles.css, sobre-nos_styles.css, etc.), limpando o styles.css principal&#10;&#10;Configuração do vercel.json para utilizar Clean URLs, removendo a necessidade do /html/ e da extensão .html nos links de produção&#10;&#10;Ajuste de todos os links de navegação para um formato relativo (index.html, educacao.html, etc.) que funciona tanto localmente quanto online com a nova configuração da Vercel&#10;&#10;Adaptação de todos os caminhos relativos internos (como ../) para caminhos absolutos com base no diretório raiz (/educacao, /contatos, etc.), garantindo funcionamento correto no ambiente de produção da Vercel&#10;&#10;URLs agora funcionam de forma limpa e amigável no Vercel, sem exibição de diretórios ou extensões .html&#10;&#10;Header e Footer:&#10;&#10;Centralização do menu de navegação no header para melhor equilíbrio visual&#10;&#10;Esconde o logo em telas muito estreitas (abaixo de 480px) para evitar que o texto da navegação colida, melhorando a responsividade&#10;&#10;Unificação do efeito hover nos links do header e do footer para uma experiência consistente&#10;&#10;Transformação do logo no header em um link clicável para a página inicial&#10;&#10;Página Home (index.html):&#10;&#10;Reformulação completa da seção Destaques com conteúdo relevante e alinhado ao site final: Educação Ambiental, Parcerias e um novo card Transforme Vidas e o Planeta que introduz a calculadora&#10;&#10;Correção do espaçamento vertical entre a seção de introdução e o carrossel&#10;&#10;Ajuste da altura das imagens do carrossel em telas estreitas para evitar zoom excessivo e melhorar a visualização mobile&#10;&#10;Adição de uma nova seção de Chamada para Ação (CTA) para a Calculadora, substituindo a antiga seção de destaques&#10;&#10;Correção de um bug de visibilidade no botão do CTA da calculadora, garantindo que ele tenha a cor de fundo correta desde o carregamento da página&#10;&#10;Página Sobre Nós (sobre-nos.html):&#10;&#10;Redesign completo da página, saindo de um layout simples de texto para um design moderno baseado em cards, com ícones e seções claras para Missão, Projeto Social, Processo de Reciclagem, Serviços e Parceiros&#10;&#10;Página Contatos (contatos.html):&#10;&#10;Redesign completo da página, unificando as informações de contato e o mapa em um único cartão integrado&#10;&#10;Implementação de um layout de duas colunas (informações à esquerda, mapa à direita) para desktop, que se transforma em uma coluna única em dispositivos móveis&#10;&#10;Aplicação do estilo de texto e dos destaques em verde nos detalhes de contato, conforme solicitado&#10;&#10;Ajuste na altura do mapa para garantir uma boa visualização em telas de todos os tamanhos, corrigindo o problema de ficar muito esticado na vertical em celulares&#10;&#10;Nova Funcionalidade: Calculadora de Impacto:&#10;&#10;Criação da nova página calculadora.html com a ferramenta interativa&#10;&#10;Design da calculadora refeito múltiplas vezes, chegando a uma versão final limpa, moderna e com a paleta de cores do site&#10;&#10;Adição de pop-ups de informação com explicações sobre como a reciclagem economiza recursos&#10;&#10;Correção de bugs críticos no CSS dos pop-ups (variável de cor e z-index) para garantir a funcionalidade&#10;&#10;Implementação de um widget de assistente de contato que aparece de forma sutil 5 segundos após a primeira interação do usuário com a calculadora&#10;&#10;Página Educação Ambiental (educacao.html):&#10;&#10;Integração da seção Calculadora de Impacto diretamente na página, precedida por um título e texto introdutório para criar uma experiência coesa&#10;&#10;Ajustes nos arquivos CSS (educacao_styles.css e calculadora_styles.css) para garantir que a calculadora se encaixe como uma seção, sem quebrar o layout da página&#10;&#10;Correção de um bug onde a calculadora não funcionava devido à ordem de carregamento dos scripts&#10;&#10;Ajuste no CSS do fact-grid para centralizar os cards corretamente em telas estreitas" />
   </component>
 </project>

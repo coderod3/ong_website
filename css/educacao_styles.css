@@ -17,9 +17,15 @@ body {
     padding: 0 20px;
 }
 
+.calculadora-wrapper{
+    background-color: #f7f7f7;
+    margin-top: 20px;
+}
+
+
 /* Banner/Introdução da Página */
 .edu-banner {
-    background: url('../img/educacao/edu_banner2.png') no-repeat center center/cover;
+    background: url('/img/educacao/edu_banner2.png') no-repeat center center/cover;
     /* Escolha uma imagem adequada */
     height: 60vh;
     display: flex;
@@ -184,6 +190,7 @@ body {
     .video-grid,
     .data-list {
         flex-direction: column;
+        align-items: center;
     }
 }
 

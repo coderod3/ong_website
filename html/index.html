@@ -5,33 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRRP - Cooperativa de Reciclagem de Ribeirão Preto</title>
-  <link rel="icon" href="../img/logo_crrp_round.png" type="image/png">
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/script.js"></script>
+  <link rel="icon" href="/img/logo_crrp_round.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/home_styles.css">
 </head>
 
 <body>
   <!-- Header com Menu de Navegação -->
-  <header class="header">
-    <img src="../img/logo_crrp_round.png" alt="Logo CRRP" class="logo">
-    <div class="nav-wrapper">
-      <nav class="nav-container">
-        <a href="../html/index.html">Home</a>
-        <a href="../html/educacao.html">Educação Ambiental</a>
-        <a href="../html/sobre-nos.html">Sobre Nós</a>
-        <a href="../html/contatos.html">Contato</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
   <!-- Banner Principal -->
   <section class="banner">
     <div class="banner-overlay"></div>
     <div class="banner-content">
-      <img src="../img/logo_crrp_round.png" alt="Logo CRRP" class="logo">
+      <img src="/img/logo_crrp_round.png" alt="Logo CRRP" class="logo">
       <h1>CRRP - Cooperativa de Reciclagem de Ribeirão Preto</h1>
       <p>Transformando resíduos em oportunidades</p>
-      <a href="../html/sobre-nos.html" class="cta-button">Conheça mais</a>
+
+      <!--<p>Reciclando por um mundo melhor</p>-->
+
+      <a href="/sobre-nos" class="cta-button">Conheça mais</a>
     </div>
   </section>
 
@@ -51,9 +44,9 @@
   <!-- Carousel de Imagens -->
   <section class="carousel">
     <div class="carousel-images" id="carouselImages">
-      <img src="../img/home/carousel_image1.jpg" alt="Atividade de coleta">
-      <img src="../img/home/carousel_image2.jpg" alt="Triagem de materiais">
-      <img src="../img/home/carousel_image3.jpg" alt="Processo de reciclagem">
+      <img src="/img/home/carousel_image1.jpg" alt="Atividade de coleta">
+      <img src="/img/home/carousel_image2.jpg" alt="Triagem de materiais">
+      <img src="/img/home/carousel_image3.jpg" alt="Processo de reciclagem">
     </div>
     <div class="carousel-controls">
       <button id="prevBtn">&#10094;</button>
@@ -61,49 +54,54 @@
     </div>
   </section>
 
-  <!-- Seção de Destaques -->
   <section class="highlights">
     <div class="container">
       <h2>Destaques</h2>
       <div class="highlight-cards">
+
         <div class="card">
-          <img src="../img/home/highlight_project.jpg" alt="Projeto Sustentável">
-          <h3>Projeto Sustentável</h3>
-          <p>Conheça nosso projeto para ampliar a reciclagem e fortalecer a economia circular em Ribeirão Preto.</p>
+          <img src="/img/home/highlight_project.jpg" alt="Materiais recicláveis separados e organizados">
+          <h3>Educação Ambiental</h3>
+          <p>Acreditamos que a mudança começa com o conhecimento. Explore nossos materiais educativos e descubra como fazer a diferença no seu dia a dia.</p>
         </div>
+
         <div class="card">
-          <img src="../img/home/highlight_parceria.jpg" alt="Parcerias Estratégicas">
+          <img src="/img/home/highlight_parceria.jpg" alt="Pessoas trabalhando juntas na cooperativa">
           <h3>Parcerias</h3>
           <p>Unimos forças com empresas e instituições para promover a reciclagem e a inclusão social.</p>
         </div>
+
         <div class="card">
-          <img src="../img/home/highlight_noticia.jpg" alt="Notícias Recentes">
-          <h3>Notícias</h3>
-          <p>Fique por dentro das novidades e conquistas da nossa cooperativa.</p>
+          <img src="/img/home/highlight_noticia.jpg" alt="Uma pessoa sorrindo ao lado de um gráfico de impacto positivo">
+          <h3>Faça a diferença</h3>
+          <p>Nossa missão é transformar vidas através da inclusão social. Descubra como sua rotina de reciclagem também tem um poder gigante usando nossa calculadora!</p>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-calculadora-section">
+    <div class="cta-calculadora-content">
+      <div class="cta-calculadora-texto">
+        <span class="tagline">FERRAMENTA INTERATIVA</span>
+        <h2>Descubra o Poder da Sua Reciclagem</h2>
+        <p>Já parou para pensar que as garrafas e papéis que você separa toda semana se transformam em um impacto gigante? Acesse nossa página de educação, use nossa calculadora e veja a diferença que você faz!</p>
+        <a href="/educacao" class="cta-button-grande">Aprenda mais</a>
+      </div>
+      <div class="cta-calculadora-imagem">
+        <img src="https://img.icons8.com/plasticine/400/saving-book.png" alt="Ilustração de impacto positivo">
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="social-icon">
-        <a href="https://www.instagram.com/crrp.cooperativarp/" target="_blank">
-          <img src="../img/instagram.png" alt="Instagram">
-        </a>
-      </div>
-      <div class="footer-nav">
-        <a href="../html/index.html">Home</a>
-        <a href="../html/educacao.html">Educação Ambiental</a>
-        <a href="../html/sobre-nos.html">Sobre Nós</a>
-        <a href="../html/contatos.html">Contato</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2025 CRRP - Cooperativa de Reciclagem de Ribeirão Preto. Todos os direitos reservados.
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS -->
+  <script src="/js/loader.js"></script>
+  <script src="/js/carousel_script.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-// script.js
 
 // Implementação de smooth scrolling para links âncora
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -12,4 +11,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Você pode adicionar mais interatividade aqui conforme a necessidade da página

@@ -5,25 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Educação Ambiental - CRRP</title>
-  <link rel="icon" href="../img/logo_crrp_round.png" type="image/x-icon">
-  <link rel="stylesheet" href="../css/educacao_styles.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/educacao_script.js"></script>
+  <link rel="icon" href="/img/logo_crrp_round.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="/css/educacao_styles.css">
+  <link rel="stylesheet" href="/css/calculadora_styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script src="/js/educacao_script.js"></script>
 </head>
 
 <body>
   <!-- Cabeçalho com Navegação -->
-  <header class="header">
-    <img src="../img/logo_crrp_round.png" alt="Logo CRRP" class="logo">
-    <div class="nav-wrapper">
-      <nav class="nav-container">
-        <a href="../html/index.html">Home</a>
-        <a href="../html/educacao.html">Educação Ambiental</a>
-        <a href="../html/sobre-nos.html">Sobre Nós</a>
-        <a href="../html/contatos.html">Contato</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header-placeholder"></div>
 
   <!-- Conteúdo Principal -->
   <main>
@@ -41,17 +34,17 @@
         <h2>Fatos sobre Reciclagem</h2>
         <div class="fact-grid">
           <div class="fact-card">
-            <img src="../img/educacao/icon_recycle.png" alt="Ícone Reciclagem">
+            <img src="/img/educacao/icon_recycle.png" alt="Ícone Reciclagem">
             <h3>Reciclagem</h3>
             <p>A cada mês, contribuímos para a economia circular, convertendo resíduos em valor para a sociedade.</p>
           </div>
           <div class="fact-card">
-            <img src="../img/educacao/icon_energy.png" alt="Ícone Economia de Energia">
+            <img src="/img/educacao/icon_energy.png" alt="Ícone Economia de Energia">
             <h3>Economia de Energia</h3>
             <p>Ao reciclar, economizamos até 75% de energia comparado à produção de materiais virgens.</p>
           </div>
           <div class="fact-card">
-            <img src="../img/educacao/icon_trees1.png" alt="Ícone Preservação Ambiental">
+            <img src="/img/educacao/icon_trees1.png" alt="Ícone Preservação Ambiental">
             <h3>Preservação Ambiental</h3>
             <p>A reciclagem ajuda a preservar florestas e reduzir a emissão de gases poluentes.</p>
           </div>
@@ -81,6 +74,7 @@
             <iframe src="https://www.instagram.com/p/C712XaOuici/embed/" width="100%" height="450" frameborder="0"
               scrolling="no" allowtransparency="true" loading="lazy"></iframe>
           </div>
+
         </div>
       </div>
     </section>
@@ -106,6 +100,7 @@
       </div>
     </section>
 
+
     <!-- Seção: Dados e Conscientização -->
     <section class="edu-data">
       <div class="container">
@@ -114,41 +109,128 @@
           é reciclada. Aumentar a conscientização é fundamental para transformar essa realidade.</p>
         <ul class="data-list">
           <li>
-            <img src="../img/educacao/icon_data1.png" alt="Ícone Dados">
+            <img src="/img/educacao/icon_data1.png" alt="Ícone Dados">
             <span>Reciclagem no Brasil: Apenas 4% dos resíduos são reciclados.</span>
           </li>
           <li>
-            <img src="../img/educacao/icon_data2.png" alt="Ícone Impacto">
+            <img src="/img/educacao/icon_data2.png" alt="Ícone Impacto">
             <span>A economia circular pode gerar até R$1 trilhão em novos negócios.</span>
           </li>
           <li>
-            <img src="../img/educacao/icon_data3.png" alt="Ícone Sustentabilidade">
+            <img src="/img/educacao/icon_data3.png" alt="Ícone Sustentabilidade">
             <span>Mais de 800 mil brasileiros dependem da reciclagem para seu sustento.</span>
           </li>
         </ul>
       </div>
     </section>
+
+    <!-- Seção: Calculadora -->
+    <section class="calculadora-wrapper">
+      <div class="container calculadora-title">
+        <h2>Calcule Seu Impacto Positivo</h2>
+      </div>
+
+      <div class="calculator-container">
+        <div class="inputs-section">
+          <div class="inputs-header">
+            <h2>Sua Rotina de Reciclagem Transforma o Mundo</h2>
+            <p>Use os sliders para indicar quantos resíduos sua família ou sua empresa separam por semana e veja o impacto positivo que você gera se esses resíduos chegarem até nós!</p>
+          </div>
+          <div class="input-group">
+            <div class="input-label">
+              <span class="label-text">Garrafas PET</span>
+              <span class="slider-value" id="pet-value">10 un.</span>
+            </div>
+            <input type="range" id="pet" min="0" max="50" value="10" oninput="updateAll()">
+          </div>
+          <div class="input-group">
+            <div class="input-label">
+              <span class="label-text">Latinhas de Alumínio</span>
+              <span class="slider-value" id="aluminio-value">20 un.</span>
+            </div>
+            <input type="range" id="aluminio" min="0" max="100" value="20" oninput="updateAll()">
+          </div>
+          <div class="input-group">
+            <div class="input-label">
+              <span class="label-text">Papel e Papelão</span>
+              <span class="slider-value" id="papel-value">2.0 kg</span>
+            </div>
+            <input type="range" id="papel" min="0" max="10" value="2" step="0.5" oninput="updateAll()">
+          </div>
+        </div>
+        <div class="results-section">
+          <h3>Seu Impacto Anual</h3>
+          <div class="result-item">
+            <div class="result-text-content">
+              <span class="result-value" id="agua-result">--</span>
+              <span class="result-label">Litros de água economizados</span>
+            </div>
+            <button class="info-button" onclick="showModal('agua')">i</button>
+          </div>
+          <div class="result-item">
+            <div class="result-text-content">
+              <span class="result-value" id="energia-result">--</span>
+              <span class="result-label">kWh de energia economizados</span>
+            </div>
+            <button class="info-button" onclick="showModal('energia')">i</button>
+          </div>
+          <div class="result-item">
+            <div class="result-text-content">
+              <span class="result-value" id="co2-result">--</span>
+              <span class="result-label">Kg de CO² evitados</span>
+            </div>
+            <button class="info-button" onclick="showModal('co2')">i</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!--  fale conosco widget -->
+  <div id="info-modal" class="modal-overlay" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <!-- usado como placeholder para colocar as mensagens informativas-->
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <div class="contact-widget-container" id="contactWidget">
+    <div class="contact-window">
+      <div class="window-header">
+        <h4>Pronto para Fazer Parte?</h4>
+        <button class="window-close-btn" onclick="toggleWidget(false)">&times;</button>
+      </div>
+      <div class="window-body">
+        <p>Usou nossa calculadora e gostou do resultado? Seu impacto positivo pode ser real! Entre em contato para agendar uma coleta ou tirar suas dúvidas.</p>
+        <div class="window-actions">
+          <a href="mailto:crrp.cooperativarp@hotmail.com" class="window-action-btn email">
+            <img src="https://img.icons8.com/material-rounded/48/ffffff/new-post.png" alt="Email Icon"/>
+            Agendar por E-mail
+          </a>
+          <a href="https://wa.me/551639002142" target="_blank" class="window-action-btn whatsapp">
+            <img src="https://img.icons8.com/material-rounded/48/ffffff/whatsapp.png" alt="WhatsApp Icon"/>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-tab" onclick="toggleWidget(true)">
+      <img src="https://img.icons8.com/material-rounded/48/ffffff/chat--v1.png" alt="Chat Icon"/>
+      <span>Fale Conosco</span>
+    </div>
+  </div>
+
+
   <!-- Rodapé -->
-  <footer>
-    <div class="footer-content">
-      <div class="social-icon">
-        <a href="https://www.instagram.com/crrp.cooperativarp/" target="_blank">
-          <img src="../img/instagram.png" alt="Instagram">
-        </a>
-      </div>
-      <div class="footer-nav">
-        <a href="../html/index.html">Home</a>
-        <a href="../html/educacao.html">Educação Ambiental</a>
-        <a href="../html/sobre-nos.html">Sobre Nós</a>
-        <a href="../html/contatos.html">Contato</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2025 CRRP - Cooperativa de Reciclagem de Ribeirão Preto. Todos os direitos reservados.
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+
+  <script src="/js/loader.js"></script>
+  <script src="/js/calculadora_script.js"></script>
+  <script src="/js/educacao_script.js"></script>
+
+
 </body>
 
 </html>

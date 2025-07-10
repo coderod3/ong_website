@@ -1,0 +1,274 @@
+/* Banner Principal */
+.banner {
+    height: 80vh;
+    background: url('/img/home/banner_image.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom-right-radius: 1%;
+    border-bottom-left-radius: 1%;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 1%;
+    border-bottom-left-radius: 1%;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.banner-content img.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #218838;
+}
+
+/* Seção de Introdução */
+.intro {
+    padding: 60px 0;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+/* Carousel de Imagens */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto 0px;
+    overflow: hidden;
+    border-radius: 1%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Seção de Destaques */
+.highlights {
+    padding: 60px 0;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.highlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/*calculadora intro*/
+
+/* Seção de Chamada para Ação (CTA) da Calculadora */
+.cta-calculadora-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.cta-calculadora-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.cta-calculadora-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.cta-calculadora-texto .tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-verde-secundario);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cta-calculadora-texto h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cor-verde-principal);
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.cta-calculadora-texto p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.cta-button-grande {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #28a745; /* Cor de fundo explícita */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    opacity: 1; /* Garante 100% de visibilidade */
+    transform: translateY(0); /* Estado inicial para a transição */
+}
+
+.cta-button-grande:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+    background-color: #218838; /* Cor de fundo no hover */
+}
+
+.cta-calculadora-imagem {
+    flex: 0 0 300px; /* Tamanho fixo para a imagem */
+}
+
+.cta-calculadora-imagem img {
+    width: 100%;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Animação de flutuação */
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .cta-calculadora-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .cta-calculadora-texto {
+        text-align: center;
+    }
+    .cta-calculadora-imagem {
+        order: -1; /* Coloca a imagem no topo em telas pequenas */
+        width: 200px;
+    }
+    .cta-calculadora-texto h2 {
+        font-size: 2.2rem;
+    }
+    .carousel-images img {
+        height: 200px; /* Reduz a altura da imagem em telas menores */
+    }
+}
